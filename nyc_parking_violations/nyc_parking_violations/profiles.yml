@@ -5,5 +5,5 @@ nyc_parking_violations:
       path: 'nyc_parking_violations/data/nyc_parking_violations.db'
     prod:
       type: duckdb
-      path: './data/prod_nyc_parking_violations.db'
+      path: 'nyc_parking_violations/data/prod_nyc_parking_violations.db'
   target: dev
