@@ -1,0 +1,3 @@
+Project Name: nyc_yellow_taxi
+Database type: duckdb
+
