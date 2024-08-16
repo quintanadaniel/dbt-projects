@@ -1,0 +1,29 @@
+[0m22:01:07.714112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106954510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d0ee90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d0e590>]}
+
+
+============================== 22:01:07.716868 | 187eff26-8712-47d6-9f19-47fcedd0b5f1 ==============================
+[0m22:01:07.716868 [info ] [MainThread]: Running with dbt=1.8.5
+[0m22:01:07.717206 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': '/Users/danielquintana/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init .', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m22:01:22.067937 [debug] [MainThread]: Starter project path: /Users/danielquintana/personal_projects/python-bigdata/dbt-projects/venv/lib/python3.11/site-packages/dbt/include/starter_project
+[0m22:01:22.079292 [info ] [MainThread]: 
+Your new dbt project "nyc_parking_violations" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:01:22.080026 [info ] [MainThread]: Setting up your profile.
+[0m22:01:25.688403 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 18.007837, "process_user_time": 0.621225, "process_kernel_time": 0.113967, "process_mem_max_rss": "113606656", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:01:25.688891 [debug] [MainThread]: Command `dbt init` succeeded at 22:01:25.688798 after 18.01 seconds
+[0m22:01:25.689183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102fc1c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102edcf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102edd110>]}
+[0m22:01:25.689461 [debug] [MainThread]: Flushing usage events
+[0m22:01:31.063936 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
