@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+import duckdb
+con = duckdb.connect('dev.duckdb', read_only=True)
+print(con.sql('select * from flight_prices limit 10'))
+print(con.sql('select count(*) as total_flight_prices from flight_prices'))
+if (con.execute('select count(*) as total_flight_prices from flight_prices').fetchall()[0][0] == 300153):
+  with open('./successful_data_check', 'w') as f:
+    f.write('300153')

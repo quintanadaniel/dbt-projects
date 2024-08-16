@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+from datetime import datetime
+
+import duckdb
+
+con = duckdb.connect('dev.duckdb', read_only=True)
+print(con.sql('select * as total_flight from total_flight_by_airline_departure_morning'))
+if con.execute('select * as total_flight from total_flight_by_airline_departure_morning').fetchall()[0][1] == 2348:
+    with open('./successful_data_check', 'w') as f:
+        f.write('2348')
+        f.write('\n')
+        f.write(datetime.now().strftime('%Y-%m-%d %H:%M'))

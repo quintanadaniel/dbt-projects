@@ -1,0 +1,28 @@
+version: 2
+
+models:
+- name: flight_prices
+  description: Initial import of the Flight Prices data from CSV source
+  access: public
+  columns:
+    - name: airline
+      tests:
+        - not_null
+    - name: class
+      test:
+        - not_null
+        - accepted_values:
+            values: ['Economy','Business']
+    - name: departure_time
+      tests:
+        - columns_equal:
+            column_name2: arrival_time
+- name: total_flight_by_airline_departure_morning
+  description: Finding Flight Prices Departure Morning
+  access: public
+
+sources:
+  - name: raw
+    tables:
+      - name: flight_prices
+      - name: flight_list
