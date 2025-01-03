@@ -1,0 +1,17 @@
+dbtVersion: 1.9.0
+
+jobs:
+  - name: daily
+    targetName: dev
+    schedule: 0 12 * * *
+    steps:
+      - name: run models
+        command: dbt run -m bronze_parking_violation+codes
+      - name: test models
+        command: dbt test -m bronze_parking_violation+codes
+
+  - name: nightly
+    schedule: 0 0 * *
+    steps:
+      - name: run models
+        command: dbt run
