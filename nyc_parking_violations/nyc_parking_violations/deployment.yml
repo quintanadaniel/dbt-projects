@@ -11,7 +11,7 @@ jobs:
         command: dbt test -m bronze_parking_violation+codes
 
   - name: nightly
-    schedule: 0 0 * *
+    schedule: 0 0 * * *
     steps:
       - name: run models
         command: dbt run
